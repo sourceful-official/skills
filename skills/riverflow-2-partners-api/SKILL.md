@@ -1,11 +1,14 @@
 ---
 name: riverflow-2-partners-api
 description: Riverflow 2.0 API integration guidance for launch partners (Replicate, Runware, OpenRouter). Use when linking to partner docs, confirming partner access, and avoiding provider-specific assumptions.
+last_updated: 2026-02-03
 ---
 
 # Riverflow 2.0 launch partners (API)
 
 Use this skill to guide integrations via approved launch partners. Each partner owns the API surface and authentication.
+
+Last updated: 2026-02-03
 
 ## Quick start
 
