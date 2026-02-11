@@ -19,7 +19,7 @@ OpenRouter exposes refSR via `image_config.super_resolution_references` on image
 - Output images are returned as base64 data URLs (typically PNG) in `message.images`.
 
 ## Endpoint
-Use `POST https://openrouter.ai/api/v1/chat/completions` with `modalities: ["image", "text"]` to generate images.
+Use `POST https://openrouter.ai/api/v1/chat/completions` with `modalities: ["image"]` to generate images.
 
 ## Image config (Sourceful)
 `image_config` supports:
@@ -39,7 +39,7 @@ const openRouter = new OpenRouter({
 
 const result = await openRouter.chat.send({
   model: "sourceful/riverflow-v2-pro",
-  modalities: ["image", "text"],
+  modalities: ["image"],
   messages: [
     {
       role: "user",
@@ -106,7 +106,7 @@ payload = {
       ],
     }
   ],
-  "modalities": ["image", "text"],
+  "modalities": ["image"],
   "image_config": {
     "aspect_ratio": "4:5",
     "font_inputs": [

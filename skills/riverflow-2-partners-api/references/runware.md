@@ -35,6 +35,12 @@ Runware accepts auth via `Authorization: Bearer $RUNWARE_API_KEY` or an `authent
 ## Constraints and limits
 - `positivePrompt` is required (2+ characters). Reference images: up to 10. Super resolution references: up to 4. Font inputs: up to 2, supported formats `TTF`, `OTF`, `WOFF`, `WOFF2`.
 - Input image requirements for Riverflow 2.0: width and height between 300 and 2048, file size max 20MB.
+- Supported output image dimensions for Riverflow 2.0 Fast:
+  - 1K: 1024×1024 (1:1), 1152×864 (4:3), 864×1152 (3:4), 1280×720 (16:9), 720×1280 (9:16), 1248×832 (3:2), 832×1248 (2:3), 1120×896 (5:4), 896×1120 (4:5), 1512×648 (21:9).
+  - 2K: 2048×2048 (1:1), 2304×1728 (4:3), 1728×2304 (3:4), 2560×1440 (16:9), 1440×2560 (9:16), 2496×1664 (3:2), 1664×2496 (2:3), 2240×1792 (5:4), 1792×2240 (4:5), 3024×1296 (21:9).
+- Supported output image dimensions for Riverflow 2.0 Pro:
+  - 1K and 2K: same as Riverflow 2.0 Fast.
+  - 4K: 4096×4096 (1:1), 4608×3456 (4:3), 3456×4608 (3:4), 5120×2880 (16:9), 2880×5120 (9:16), 4992×3328 (3:2), 3328×4992 (2:3), 4480×3584 (5:4), 3584×4480 (4:5), 6048×2592 (21:9).
 - Image uploads accept `jpeg`, `jpg`, `png`, `webp`, `bmp`, `gif`; images are stored at max 2048px and deleted after 30 days if not reused.
 - Upscale task input image accepts UUID, data URI, base64, or URL; supported formats are PNG/JPG/WEBP; max input size is 1,048,576 pixels.
 - `imageInference` output controls: `outputType` supports `URL`, `dataURI`, `base64Data`; `outputFormat` supports `JPG`, `PNG`, `WEBP`; `outputQuality` ranges 20–99.
